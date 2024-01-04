@@ -1,4 +1,4 @@
-
+import NavBar from "./containers/NavBar/NavBar";
 import './App.scss'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <h1> hello </h1>
+        <NavBar searchTerm={""} />
       </div>
     </>
   )
