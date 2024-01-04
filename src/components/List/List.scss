@@ -1,0 +1,6 @@
+@use "../../styles/variables" as *;
+
+.list-empty-message {
+    font-family:$fontfamily2;
+    padding: 20px;
+}

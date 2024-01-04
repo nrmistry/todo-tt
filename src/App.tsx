@@ -1,6 +1,6 @@
 import NavBar from "./containers/NavBar/NavBar";
 import './App.scss'
-import ListItems from "./components/ListItems/ListItems";
+import List from "./components/List/List";
 import {useState} from "react";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
     <>
       <div>
         <NavBar onAddToList={handleAddToList} onResetList={handleResetList} />
-        <ListItems listItems={listItems} onDelete={handleDeleteFromList}/>
+        <List listItems={listItems} onDelete={handleDeleteFromList}/>
       </div>
     </>
   )
