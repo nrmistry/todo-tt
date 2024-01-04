@@ -1,1 +1,36 @@
 @use "../../styles/variables" as *;
+
+.searchboxContainer {
+      display: flex;
+      align-items: center;
+      border-radius: 5px; 
+      padding: 8px;
+      
+
+    &__searchbox {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 8px;
+      margin-right: 8px;
+      border-radius: 3px;
+      border: 1px solid #202223; 
+      font-family: $fontfamily2;;
+
+      &:focus {
+        border-color: $colourOne;
+        box-shadow: 0 0 5px $colourTwo;
+      }
+    }
+  
+    &__button {
+      background-color: $colourThree;
+      border: 1px solid $colourFour;
+      padding: 8px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      height: 34px;
+  
+    }
+  }

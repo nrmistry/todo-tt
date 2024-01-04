@@ -10,12 +10,23 @@ function App() {
     setListItems([...listItems, item]);
   };
 
+  const handleDeleteFromList = (index: number) => {
+    setListItems((prevListItems) => {
+      const updatedList = [...prevListItems.slice(0, index), ...prevListItems.slice(index + 1)];
+      return updatedList;
+    });
+  };
+
+  const handleResetList = () => {
+    setListItems([]);
+  }
+
 
   return (
     <>
       <div>
-        <NavBar onAddToList={handleAddToList} />
-        <ListItems listItems={listItems}/>
+        <NavBar onAddToList={handleAddToList} onResetList={handleResetList} />
+        <ListItems listItems={listItems} onDelete={handleDeleteFromList}/>
       </div>
     </>
   )

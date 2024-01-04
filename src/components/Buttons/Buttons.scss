@@ -1,0 +1,10 @@
+@use "../../styles//variables" as *;
+
+.button{
+    border: 1px solid $colourFour;
+    border-radius: 3px;
+    background-color: $colourThree;
+    color: $colourFour;
+    font-family: $fontfamily2;
+    font-size: 15px;
+}

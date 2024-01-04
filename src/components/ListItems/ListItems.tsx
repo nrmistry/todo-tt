@@ -3,13 +3,14 @@ import ListCard from "../ListCard/ListCard";
 
 type ListItemProps = {
     listItems: string[];
+    onDelete: (index: number) => void;
   };
   
-  const ListItems = ({ listItems }: ListItemProps) => {
+  const ListItems = ({ listItems, onDelete }: ListItemProps) => {
     return (
-      <div>
+      <div className="listitems">
         {listItems.map((item, index) => (
-          <ListCard key={index} item={item}/>
+          <ListCard key={index} item={item} onDelete={()=> onDelete(index)} index={index}/>
         ))}
       </div>
     );

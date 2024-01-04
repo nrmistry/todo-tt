@@ -1,1 +1,33 @@
 @use "../../styles/variables" as *;
+
+.navbar {
+    display: flex;
+    //align-items: center;
+    padding: 10px;
+    background-color: $colourThree; 
+    color: $colourFour; 
+
+    &__title{
+        font-family: $fontfamily1;
+        font-size: 30px;
+    }
+
+    &__buttons{
+        margin-left: 140px
+    }
+  
+    &__title,
+    &__buttons {
+      display: inline; 
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    &__searchbox {
+        display: flex;
+        justify-content: column;
+        margin-top: 60px;
+        margin-left: -250px;
+    }
+  
+  }

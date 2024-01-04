@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .list-card {
     border: 1px solid #000000;
     border-radius: 8px;
@@ -7,7 +9,7 @@
     position: relative;
   
     &--completed {
-      background-color: #045e028d;
+      background-color: #c5e2c58d;
       
       .list-card__text {
         text-decoration: line-through;
@@ -28,6 +30,17 @@
       white-space:wrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      font-family: $fontfamily2;
+
+    }
+
+    &__delete-button {
+        margin-left: 10px;
+        background-color: $colourThree;
+        border: 1px solid $colourThree;
+        padding: 5px;
+        border-radius: 3px;
+
 
     }
 

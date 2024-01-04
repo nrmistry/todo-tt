@@ -1,4 +1,6 @@
 import "./SearchBox.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 type SearchBoxProps = {
     searchTerm: string;
@@ -16,15 +18,17 @@ type SearchBoxProps = {
     };
   
     return (
-      <div>
+      <div className="searchboxContainer">
         <input
-          className="searchbox"
+          className="searchboxContainer__searchbox"
           type="text"
           placeholder="Add Your Task Here..."
           value={searchTerm}
           onChange={handleInputChange}
         />
-        <button onClick={onSearchBoxAddToList}>Add to List</button>
+        <button className="searchboxContainer__button" onClick={onSearchBoxAddToList}>
+        <FontAwesomeIcon icon={faPlus} />
+        </button>
       </div>
     );
   };
