@@ -1,4 +1,5 @@
 import "./ListItems.scss";
+import ListCard from "../ListCard/ListCard";
 
 type ListItemProps = {
     listItems: string[];
@@ -6,11 +7,11 @@ type ListItemProps = {
   
   const ListItems = ({ listItems }: ListItemProps) => {
     return (
-      <ul>
+      <div>
         {listItems.map((item, index) => (
-          <li key={index}>{item}</li>
+          <ListCard key={index} item={item}/>
         ))}
-      </ul>
+      </div>
     );
   };
   

@@ -20,7 +20,7 @@ type SearchBoxProps = {
         <input
           className="searchbox"
           type="text"
-          placeholder="Search Name..."
+          placeholder="Add Your Task Here..."
           value={searchTerm}
           onChange={handleInputChange}
         />

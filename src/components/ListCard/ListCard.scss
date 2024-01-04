@@ -1,0 +1,45 @@
+.list-card {
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+    &--completed {
+      background-color: #045e028d;
+      
+      .list-card__text {
+        text-decoration: line-through;
+      }
+  
+      .list-card__line {
+        display: block; 
+      }
+    }
+  
+    &__checkbox {
+      margin-left:10px;
+    }
+  
+    &__text {
+      margin: 5px;
+      flex-grow:1;
+      white-space:wrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+
+    }
+
+    &__line {
+        content: '';
+        display: none; 
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #ccc;
+        transform: translateY(-50%);
+      }
+  }
